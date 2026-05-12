@@ -1,0 +1,45 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: dinobite-mysql
+    platform: linux/arm64
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: food_order_app
+      MYSQL_USER: food_user
+      MYSQL_PASSWORD: yourpassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - dinobite-network
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  spring:
+    container_name: dinobite-backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    platform: linux/arm64
+    ports:
+      - "9090:9090"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/food_order_app
+      SPRING_DATASOURCE_USERNAME: food_user
+      SPRING_DATASOURCE_PASSWORD: yourpassword
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - dinobite-network
+
+volumes:
+  mysql_data:
+
+networks:
+  dinobite-network:

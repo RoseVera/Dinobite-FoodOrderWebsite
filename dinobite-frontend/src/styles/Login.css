@@ -1,0 +1,172 @@
+/* Login2.css */
+
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: gainsboro;
+  }
+  
+  .login-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-form h2 {
+    color: #e17909;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .login-form input {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .login-form button {
+    background-color: #00b2a9;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-form button:hover {
+    background-color: #646cffaa;
+  }
+  
+  .error-text {
+    color: red;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .register-container {
+    margin-top: -0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: gainsboro;
+  }
+  .register-wrapper {
+    margin-top: -0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .register-form {
+    background: white;
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 600px; 
+    max-width: 90%;
+  }
+  
+  .register-form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .register-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #00b2a9;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .register-form button:hover {
+    background-color: #646cffaa;
+  }
+
+  .register-alt-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.register-alt-buttons button {
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(45deg, #ff6600, #cc00ff);
+    border: none;
+    color: white;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+.register-alt-buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+.register-alt-buttons button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  flex: 1;
+  padding-right: 40px; /* İkona yer bırak */
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.5rem;
+}
+
+
+  .forgot-password {
+  color: #00b2a9;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+.reset-password-box {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-text {
+  text-align: center;
+  color: #646cff;
+}
